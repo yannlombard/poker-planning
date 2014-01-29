@@ -49,8 +49,9 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
+  /*text-align: center;*/
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1em;
 }
 
 .jumbotron .btn {
@@ -66,6 +67,55 @@ body {
 .marketing p + h4 {
     margin-top: 28px;
 }
+
+/**
+ * poker planning styles
+ */
+.values {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include clearfix();
+
+  li {
+    float: left;
+    width: 33%;
+
+    color: #111;
+    @include transition(color 300ms);
+
+    &.voted {
+      color: green;
+    }
+  }
+
+  strong {
+    @include opacity(0);
+    @include transition(opacity 300ms);
+  }
+
+  &.showValues strong {
+    @include opacity(1);
+  }
+}
+
+/**
+ * average
+ */
+.average {
+  margin: 1em 0 0;
+  padding: 1em 0 0;
+  border-top:1px solid #fff;
+
+  @include opacity(0);
+  @include transition(opacity 300ms);
+
+  &.show {
+    @include opacity(1);
+  }
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

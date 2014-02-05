@@ -29,7 +29,8 @@
 </ol>
 
 <label for="name">Nom</label>
-<input class="form-control" type="text" name="name" id="name" placeholder="Martin Lamotte"/>
+<input ng-model="user.name" class="form-control" type="text" name="name" id="name" placeholder="Martin Lamotte"/>
+<pre>{{user}}</pre>
 
 <div class="footer text-right">
     <p>♥ from the SQLI team</p>

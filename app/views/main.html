@@ -28,9 +28,17 @@
     <!--<li><a href="">∞</a></li>-->
 </ol>
 
-<label for="name">Nom</label>
-<input ng-model="user.name" class="form-control" type="text" name="name" id="name" placeholder="Martin Lamotte"/>
-<pre>{{user}}</pre>
+<div ng-hide="loginObj.user">
+    <label for="name">Identification en cours...</label>
+</div>
+<div ng-show="loginObj.user">
+    <label for="name">Nom</label>
+    <input ng-model="name" class="form-control" type="text" name="name" id="name" placeholder="Martin Lamotte"/>
+    <pre>{{loginObj.user | json}}</pre>
+    <pre>{{name | json}}</pre>
+</div>
+
+<pre>{{info | json}}</pre>
 
 <div class="footer text-right">
     <p>♥ from the SQLI team</p>

@@ -9,9 +9,7 @@ angular.module('pokerPlanningApp').factory('User', function ($firebase) {
 
     // Automatically syncs everywhere in realtime
     var user = $firebase(userRef);
-    user.$add({name: name});
-
-    console.log(user);
+    //user.$add({name: name});
 
     // Public API here
     return {

@@ -1,6 +1,7 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
+@import 'compass/css3';
 
 .browsehappy {
     margin: 0.2em 0;
@@ -80,10 +81,14 @@ body {
 
   li {
     float: left;
-    width: 33%;
+    width: 50%;
 
     color: #111;
     @include transition(color 300ms);
+
+    @media screen and (min-width: 768px) {
+      width: 33%;
+    }
 
     &.voted {
       color: green;
@@ -113,6 +118,47 @@ body {
 
   &.show {
     @include opacity(1);
+  }
+}
+
+/**
+ * cards
+ */
+.cards {
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+
+  @include clearfix();
+
+  li {
+    float: left;
+    width: 25%;
+
+    @media screen and (min-width: 768px) {
+      width: 16.66%;
+    }
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    border:1px solid #eee;
+    margin: 5px;
+    padding: 20px 0;
+
+    font:normal 20px/1 Arial;
+
+    @include border-radius(4px);
+    @include transition(background 300ms);
+
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      background: #EEE;
+      text-decoration: none;
+    }
   }
 }
 

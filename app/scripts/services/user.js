@@ -1,23 +1,87 @@
 'use strict';
 
-angular.module('pokerPlanningApp').factory('User', function ($firebase) {
+angular.module('pokerPlanningApp').factory('User', function ($q, $firebase, $firebaseSimpleLogin, $rootScope) {
     // Service logic
 
-    var name = 'Votre nom';
+    var userRef;
+    var deferred = $q.defer();
 
-    var userRef = new Firebase("https://poker-planning.firebaseio.com/users");
+    // Auth
+    var loginObj = $firebaseSimpleLogin(new Firebase("https://poker-planning.firebaseio.com/"));
 
-    // Automatically syncs everywhere in realtime
-    var user = $firebase(userRef);
-    //user.$add({name: name});
+    // if user already auth
+    loginObj.$getCurrentUser().then(function(user) {
+
+        console.log(user);
+
+        if(user == null) {
+
+            anonLogin();
+
+        } else {
+
+            // get user infos
+            getUserInfo();
+        }
+    });
+
+    // finaly get infos
+    var getUserInfo = function() {
+
+        // get user data
+        userRef = $firebase(new Firebase("https://poker-planning.firebaseio.com/users/" + loginObj.user.uid));
+
+        // resolve defered object
+        deferred.resolve(userRef);
+
+    };
+
+    /**
+     * anonymous login
+     */
+    var anonLogin = function() {
+        loginObj.$login('anonymous', {
+
+            rememberMe: true
+
+        }).then(function (user) {
+
+                // get user infos
+                getUserInfo();
+
+            });
+    };
+
+    /**
+     * LOGOUT
+     */
+    /*$scope.logout = function () {
+        loginObj.$logout();
+    };*/
+
+    /**
+     * Github LOGIN
+     */
+    /*$scope.login = function () {
+
+        loginObj.$login('github', {
+
+            rememberMe: true
+
+        }).then(function (user) {
+
+                // get user infos
+                getUserInfo();
+
+            });
+
+    };*/
+
 
     // Public API here
     return {
-        name: function () {
-            return name;
-        },
-        user: function() {
-            return user;
+        get: function() {
+            return deferred.promise;
         }
     };
 });

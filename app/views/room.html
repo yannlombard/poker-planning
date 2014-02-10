@@ -1,0 +1,42 @@
+<h4 class="text-muted pull-right">table <strong>{{roomId}}</strong></h4>
+<h4 class="text-muted">poker planning</h4>
+
+<div class="jumbotron">
+    <ul class="showValues values">
+        <li class="voted"><strong>3</strong> Julien</li>
+        <li><strong>5</strong> Sylvain</li>
+        <li><strong>3</strong> Maxime</li>
+        <li><strong>5</strong> Didier</li>
+        <li><strong>5</strong> Yann</li>
+    </ul>
+    <p class="text-right show average">moyenne <strong>5</strong></p>
+</div>
+
+<ol class="cards">
+    <li><a href="">?</a></li>
+    <li><a href="">0</a></li>
+    <li><a href="">1/2</a></li>
+    <li><a href="">1</a></li>
+    <li><a class="active" href="">2</a></li>
+    <li><a href="">3</a></li>
+    <li><a href="">5</a></li>
+    <li><a href="">8</a></li>
+    <li><a href="">13</a></li>
+    <li><a href="">20</a></li>
+    <li><a href="">40</a></li>
+    <li><a href="">100</a></li>
+    <!--<li><a href="">∞</a></li>-->
+</ol>
+
+<div ng-hide="userRef">
+    <label for="name">Identification en cours...</label>
+</div>
+<div ng-show="userRef">
+    <p>
+        <input ng-model="user.name" class="form-control" type="text" name="name" id="name" placeholder="Mon nom"/>
+    </p>
+</div>
+
+<div class="footer text-right">
+    <p>♥ from the SQLI team</p>
+</div>

@@ -14,9 +14,12 @@ angular.module('pokerPlanningApp', [
             templateUrl: 'views/main.html',
             controller : 'MainCtrl'
 
-        }).otherwise({
+        }).when('/:roomId', {
 
-            redirectTo: '/'
+            templateUrl: 'views/room.html',
+            controller : 'RoomCtrl'
+
         });
+
     }
 );

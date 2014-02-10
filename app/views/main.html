@@ -1,44 +1,27 @@
-<h4 class="text-muted pull-right">table #12</h4>
 <h4 class="text-muted">poker planning</h4>
 
-<div class="jumbotron">
-    <ul class="showValues values">
-        <li class="voted"><strong>3</strong> Julien</li>
-        <li><strong>5</strong> Sylvain</li>
-        <li><strong>3</strong> Maxime</li>
-        <li><strong>5</strong> Didier</li>
-        <li><strong>5</strong> Yann</li>
-    </ul>
-    <p class="text-right show average">moyenne <strong>5</strong></p>
-</div>
+<form class="jumbotron form-group" style="overflow: hidden;" ng-submit="submit()">
+    <label for="room">Se rendre à la salle</label>
+    <input type="text" ng-model="roomId" name="room" id="room" class="form-control" placeholder="Nom de la salle"/>
+    <button type="submit" class="btn btn-default" style="float: right;margin-top: 10px;">Go ></button>
+</form>
 
-<ol class="cards">
-    <li><a href="">?</a></li>
-    <li><a href="">0</a></li>
-    <li><a href="">1/2</a></li>
-    <li><a href="">1</a></li>
-    <li><a class="active" href="">2</a></li>
-    <li><a href="">3</a></li>
-    <li><a href="">5</a></li>
-    <li><a href="">8</a></li>
-    <li><a href="">13</a></li>
-    <li><a href="">20</a></li>
-    <li><a href="">40</a></li>
-    <li><a href="">100</a></li>
-    <!--<li><a href="">∞</a></li>-->
-</ol>
-
-<div ng-hide="loginObj.user">
+<div ng-hide="userRef">
+    <!--<button ng-click="login()">Login</button>-->
     <label for="name">Identification en cours...</label>
 </div>
-<div ng-show="loginObj.user">
-    <label for="name">Nom</label>
-    <input ng-model="name" class="form-control" type="text" name="name" id="name" placeholder="Martin Lamotte"/>
-    <pre>{{loginObj.user | json}}</pre>
-    <pre>{{name | json}}</pre>
+<div ng-show="userRef">
+    <p>
+        <input ng-model="user.name" class="form-control" type="text" name="name" id="name" placeholder="Mon nom"/>
+    </p>
+    <!--<p class="text-right">
+        <button class="btn-info btn" ng-click="logout()">Logout</button>
+    </p>-->
 </div>
 
-<pre>{{info | json}}</pre>
+<!--<pre>{{me | json}}</pre>-->
+<!--<pre>{{loginObj | json}}</pre>-->
+<!--<pre>{{info | json}}</pre>-->
 
 <div class="footer text-right">
     <p>♥ from the SQLI team</p>

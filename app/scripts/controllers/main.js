@@ -3,7 +3,9 @@
 angular.module('pokerPlanningApp').controller('MainCtrl', function ($scope, User, $location) {
 
     // get user infos
-    User.get().then(function(user) {@
+    //User.toScope($scope, 'userRef', 'user');
+
+    User.get().then(function(user) {
 
         $scope.userRef = user;
         $scope.userRef.$bind($scope, "user");

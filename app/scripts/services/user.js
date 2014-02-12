@@ -12,8 +12,6 @@ angular.module('pokerPlanningApp').factory('User', function ($q, $firebase, $fir
     // if user already auth
     loginObj.$getCurrentUser().then(function(user) {
 
-        console.log(user);
-
         if(user == null) {
 
             anonLogin();
@@ -82,6 +80,9 @@ angular.module('pokerPlanningApp').factory('User', function ($q, $firebase, $fir
     return {
         get: function() {
             return deferred.promise;
-        }
+        }/*,
+        data: function() {
+            return userRef;
+        }*/
     };
 });

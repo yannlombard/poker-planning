@@ -1,23 +1,26 @@
 <h4 class="text-muted">poker planning</h4>
 
 <form class="jumbotron form-group" style="overflow: hidden;" ng-submit="submit()">
+
+    <div ng-hide="userRef">
+        <!--<button ng-click="login()">Login</button>-->
+        <label for="name">Identification en cours...</label>
+    </div>
+
+    <div ng-show="userRef">
+        <p>
+            <label for="name">Mon nom</label>
+            <input ng-model="user.name" class="form-control" type="text" name="name" id="name" placeholder="Mon nom"/>
+        </p>
+        <!--<p class="text-right">
+            <button class="btn-info btn" ng-click="logout()">Logout</button>
+        </p>-->
+    </div>
+
     <label for="room">Se rendre à la salle</label>
     <input type="text" ng-model="roomId" name="room" id="room" class="form-control" placeholder="Nom de la salle"/>
     <button type="submit" class="btn btn-default" style="float: right;margin-top: 10px;">Go ></button>
 </form>
-
-<div ng-hide="userRef">
-    <!--<button ng-click="login()">Login</button>-->
-    <label for="name">Identification en cours...</label>
-</div>
-<div ng-show="userRef">
-    <p>
-        <input ng-model="user.name" class="form-control" type="text" name="name" id="name" placeholder="Mon nom"/>
-    </p>
-    <!--<p class="text-right">
-        <button class="btn-info btn" ng-click="logout()">Logout</button>
-    </p>-->
-</div>
 
 <!--<pre>{{me | json}}</pre>-->
 <!--<pre>{{loginObj | json}}</pre>-->

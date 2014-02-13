@@ -1,10 +1,11 @@
 'use strict';
 
-angular.module('pokerPlanningApp').factory('User', function ($q, $firebase, $firebaseSimpleLogin, $rootScope) {
+angular.module('pokerPlanningApp').factory('User', function($q, $firebase, $firebaseSimpleLogin) {
     // Service logic
-
-    var userRef;
-    var deferred = $q.defer();
+    var deferred     = $q.defer(),
+        deferredName = $q.defer(),
+        deferredRoom = $q.defer();
+    var userRef, userNameRef, userRoomRef, uid;
 
     // Auth
     var loginObj = $firebaseSimpleLogin(new Firebase("https://poker-planning.firebaseio.com/"));
@@ -26,11 +27,22 @@ angular.module('pokerPlanningApp').factory('User', function ($q, $firebase, $fir
     // finaly get infos
     var getUserInfo = function() {
 
+        // store uid
+        uid = loginObj.user.uid;
+
         // get user data
         userRef = $firebase(new Firebase("https://poker-planning.firebaseio.com/users/" + loginObj.user.uid));
 
+        // get user name
+        userNameRef = $firebase(new Firebase("https://poker-planning.firebaseio.com/users/" + loginObj.user.uid + "/name"));
+
+        // get room
+        userRoomRef = $firebase(new Firebase("https://poker-planning.firebaseio.com/users/" + loginObj.user.uid + "/room"));
+
         // resolve defered object
         deferred.resolve(userRef);
+        deferredName.resolve(userNameRef);
+        deferredRoom.resolve(userRoomRef);
 
     };
 
@@ -42,7 +54,7 @@ angular.module('pokerPlanningApp').factory('User', function ($q, $firebase, $fir
 
             rememberMe: true
 
-        }).then(function (user) {
+        }).then(function(user) {
 
                 // get user infos
                 getUserInfo();
@@ -54,35 +66,66 @@ angular.module('pokerPlanningApp').factory('User', function ($q, $firebase, $fir
      * LOGOUT
      */
     /*$scope.logout = function () {
-        loginObj.$logout();
-    };*/
+     loginObj.$logout();
+     };*/
 
     /**
      * Github LOGIN
      */
     /*$scope.login = function () {
 
-        loginObj.$login('github', {
+     loginObj.$login('github', {
 
-            rememberMe: true
+     rememberMe: true
 
-        }).then(function (user) {
+     }).then(function (user) {
 
-                // get user infos
-                getUserInfo();
+     // get user infos
+     getUserInfo();
 
-            });
+     });
 
-    };*/
+     };*/
 
 
     // Public API here
     return {
-        get: function() {
+        getName: function() {
+
+            // get from cache
+            if(userNameRef) {
+                deferredName = $q.defer();
+                deferredName.resolve(userNameRef);
+            }
+
+            return deferredName.promise;
+
+        },
+
+        getRoom: function() {
+
+            // get from cache
+            if(userRoomRef) {
+                deferredRoom = $q.defer();
+                deferredRoom.resolve(userRoomRef);
+            }
+
+            return deferredRoom.promise;
+
+        },
+
+        get    : function() {
+
+            // get from cache
+            if(userRef) {
+                deferred = $q.defer();
+                deferred.resolve(userRef);
+            }
+
             return deferred.promise;
-        }/*,
-        data: function() {
-            return userRef;
-        }*/
+        },
+        getUID : function() {
+            return uid;
+        }
     };
 });

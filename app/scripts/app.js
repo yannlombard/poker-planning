@@ -14,7 +14,7 @@ angular.module('pokerPlanningApp', [
             templateUrl: 'views/main.html',
             controller : 'MainCtrl'
 
-        }).when('/:roomId', {
+        }).when('/:room', {
 
             templateUrl: 'views/room.html',
             controller : 'RoomCtrl'

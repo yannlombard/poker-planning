@@ -2,15 +2,15 @@
 
 <form class="jumbotron form-group" style="overflow: hidden;" ng-submit="submit()">
 
-    <div ng-hide="userRef">
+    <div ng-hide="userNameRef">
         <!--<button ng-click="login()">Login</button>-->
         <label for="name">Identification en cours...</label>
     </div>
 
-    <div ng-show="userRef">
+    <div ng-show="userNameRef">
         <p>
             <label for="name">Mon nom</label>
-            <input ng-model="user.name" class="form-control" type="text" name="name" id="name" placeholder="Mon nom"/>
+            <input ng-model="name" class="form-control" type="text" name="name" id="name" placeholder="Mon nom"/>
         </p>
         <!--<p class="text-right">
             <button class="btn-info btn" ng-click="logout()">Logout</button>
@@ -24,7 +24,7 @@
 
 <!--<pre>{{me | json}}</pre>-->
 <!--<pre>{{loginObj | json}}</pre>-->
-<!--<pre>{{info | json}}</pre>-->
+<!--<pre>{{room | json}}</pre>-->
 
 <div class="footer text-right">
     <p>♥ from the SQLI team</p>

@@ -1,32 +1,43 @@
 'use strict';
 
-angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User, Room, $routeParams) {
+angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User, Room, $routeParams, config) {
 
     // set room to scope
     $scope.id = $routeParams.room;
 
     // set room id
-    Room.setId($scope.id);
+    Room.setId($routeParams.room);
 
-    var user;
+    User.enterRoom($routeParams.room).then(function(roomUser) {
+
+        console.log('roomUser', roomUser);
+
+    });
+
+    // show users in room
+    $scope.roomObj = Room.get();
+
+    $scope.votes = config.votes;
+
+    //var user;
 
     // set user room
     // get user infos
-    User.get().then(function(userValue) {
+    /*User.getUser().then(function(user) {
 
-        user = $scope.userRef = userValue;
+        $scope.remoteUser = user;
 
         // save room
-        $scope.userRef.room = $routeParams.room;
-        $scope.userRef.$save('room');
+        $scope.remoteUser.room = $routeParams.room;
+        $scope.remoteUser.$save('room');
 
-        $scope.userRef.$on('loaded', function() {
+        $scope.remoteUser.$on('loaded', function() {
             registerUser();
         });
-    });
+    });*/
 
 
-    var registerUser = function() {
+    /*var registerUser = function() {
 
         // get users collection
         Room.getUsers().then(function(users) {
@@ -52,6 +63,6 @@ angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User,
                 //$scope.users = value.val();
             });
         });
-    };
+    };*/
 
 });

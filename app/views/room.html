@@ -3,11 +3,13 @@
 
 <div class="jumbotron">
     <ul class="showValues values">
-        <li class="voted"><strong>3</strong> Julien</li>
+        <!--<pre>{{users | json}}</pre>-->
+        <li ng-repeat="id in roomObj.$getIndex()"><strong>{{votes[roomObj[id].vote]}}</strong> {{roomObj[id].name}}</li>
+        <!--<li class="voted"><strong>3</strong> Julien</li>
         <li><strong>5</strong> Sylvain</li>
         <li><strong>3</strong> Maxime</li>
         <li><strong>5</strong> Didier</li>
-        <li><strong>5</strong> Yann</li>
+        <li><strong>5</strong> Yann</li>-->
     </ul>
     <p class="text-right show average">moyenne <strong>5</strong></p>
 </div>

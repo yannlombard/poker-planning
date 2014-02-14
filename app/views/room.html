@@ -2,6 +2,7 @@
 <h4 class="text-muted">poker planning</h4>
 
 <div class="jumbotron">
+    <p ng-hide="roomObj">Chargement...</p>
     <ul class="showValues values">
         <!--<pre>{{users | json}}</pre>-->
         <li ng-repeat="id in roomObj.$getIndex()"><strong>{{votes[roomObj[id].vote]}}</strong> {{roomObj[id].name}}</li>
@@ -14,8 +15,10 @@
     <p class="text-right show average">moyenne <strong>5</strong></p>
 </div>
 
-<ol class="cards">
-    <li><a href="">?</a></li>
+<p ng-hide="userUID">Identification...</p>
+<ol class="cards" ng-show="userUID">
+    <li ng-repeat="vote in votes"><a ng-class="{active: roomObj[userUID] === $index}" href="" ng-click="voteFor($index)">{{vote}}</a></li>
+    <!--<li></li>
     <li><a href="">0</a></li>
     <li><a href="">1/2</a></li>
     <li><a href="">1</a></li>
@@ -26,7 +29,7 @@
     <li><a href="">13</a></li>
     <li><a href="">20</a></li>
     <li><a href="">40</a></li>
-    <li><a href="">100</a></li>
+    <li><a href="">100</a></li>-->
     <!--<li><a href="">∞</a></li>-->
 </ol>
 

@@ -19,6 +19,15 @@ angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User,
 
     $scope.votes = config.votes;
 
+    $scope.voteFor = function(id) {
+
+        Room.voteFor($scope.userUID, id);
+    };
+
+    User.getCurrentUser().then(function(user) {
+        $scope.userUID = user.uid;
+    });
+
     //var user;
 
     // set user room

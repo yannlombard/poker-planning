@@ -27,6 +27,18 @@ angular.module('pokerPlanningApp').factory('Room', function($q, $firebase) {
     };
 
     /**
+     * vote for
+     */
+    var voteFor = function(uid, vote) {
+        var room = getRoom();
+
+        console.log(room);
+        room[uid].vote = vote;
+
+        room.$save(uid);
+    };
+
+    /**
      * user join the room
      */
     var join = function(id, user) {
@@ -54,6 +66,10 @@ angular.module('pokerPlanningApp').factory('Room', function($q, $firebase) {
 
         join: function(id, user) {
             return join(id, user);
+        },
+
+        voteFor: function(uid, vote) {
+            voteFor(uid, vote);
         },
 
         get: function() {

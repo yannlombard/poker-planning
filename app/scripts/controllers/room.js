@@ -1,77 +1,66 @@
 'use strict';
 
-angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User, Room, $routeParams, config) {
+angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User, Room, $routeParams, config, $location) {
 
-    // set room to scope
-    $scope.id = $routeParams.room;
+    // set roomID to scope
+    $scope.roomID = $routeParams.roomID;
 
-    // set room id
-    Room.setId($routeParams.room);
+    // set factory roomID
+    Room.setID($routeParams.roomID);
 
-    User.enterRoom($routeParams.room).then(function(roomUser) {
+    // get room data
+    $scope.roomData = {};
 
-        console.log('roomUser', roomUser);
+    $scope.roomObj = Room.getRoom();
 
-    });
-
-    // show users in room
-    $scope.roomObj = Room.get();
-
+    // bind votes list for ui
     $scope.votes = config.votes;
 
-    $scope.voteFor = function(id) {
+    /**
+     * auto login user
+     */
+    User.login().then(function(uid) {
+        console.log('logged in', uid);
+        $scope.uid = uid;
 
-        Room.voteFor($scope.userUID, id);
-    };
+        // set user data to room
+        Room.setUser();
 
-    User.getCurrentUser().then(function(user) {
-        $scope.userUID = user.uid;
+        // set user roomID
+        var userRoom = User.getRoom();
+        userRoom.$set($scope.roomID);
+
+        // if noname user, set user room, redirect to homepage
+        var userName = User.getName();
+        userName.$on('loaded', function() {
+
+            if(!userName.$value) {
+                $location.path('/');
+            }
+
+        });
     });
 
-    //var user;
+    /**
+     * vote for
+     */
+    $scope.voteFor = function(vote) {
+        var target = $scope.roomObj[User.getUID()].vote == vote ? -1 : vote;
+        Room.voteFor(target);
+    };
 
-    // set user room
-    // get user infos
-    /*User.getUser().then(function(user) {
+    /**
+     * reset vote
+     */
+    $scope.resetVote = function() {
+        Room.resetVote();
+    };
 
-        $scope.remoteUser = user;
-
-        // save room
-        $scope.remoteUser.room = $routeParams.room;
-        $scope.remoteUser.$save('room');
-
-        $scope.remoteUser.$on('loaded', function() {
-            registerUser();
-        });
-    });*/
-
-
-    /*var registerUser = function() {
-
-        // get users collection
-        Room.getUsers().then(function(users) {
-
-            $scope.users = users;
-
-            console.log(user);
-
-            // set user infos
-            var uid = User.getUID();
-            $scope.users[uid] = {
-                name: user.name,
-                vote: -1
-            };
-
-            $scope.users.$save();
-
-            // update view
-            $scope.users.$on('change', function(value) {
-
-                console.log($scope.users.$getIndex());
-
-                //$scope.users = value.val();
-            });
-        });
-    };*/
+    /**
+     * remove user
+     */
+    $scope.removeUser = function(uid) {
+        Room.removeUser(uid);
+    };
 
 });

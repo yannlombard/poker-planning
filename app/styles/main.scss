@@ -93,6 +93,12 @@ body {
     &.voted {
       color: green;
     }
+
+    .btn {
+      padding: 5px;
+      @include border-radius(20px);
+      font-size: 15px;
+    }
   }
 
   strong {
@@ -109,12 +115,18 @@ body {
  * average
  */
 .average {
+  @extend .clearfix;
+
   margin: 1em 0 0;
   padding: 1em 0 0;
   border-top:1px solid #fff;
 
   @include opacity(0);
   @include transition(opacity 300ms);
+
+  .btn {
+    padding: 5px 10px;
+  }
 
   &.show {
     @include opacity(1);

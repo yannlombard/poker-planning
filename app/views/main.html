@@ -2,30 +2,22 @@
 
 <form class="jumbotron form-group" style="overflow: hidden;" ng-submit="submit()">
 
-    <div ng-hide="auth">
-        <!--<button ng-click="login()">Login</button>-->
+    <div ng-hide="uid">
         <label for="name">Identification en cours...</label>
     </div>
 
-    <div ng-show="auth">
+    <div ng-show="uid">
         <p>
             <label for="name">Mon nom</label>
             <input ng-model="name" class="form-control" type="text" name="name" id="name" placeholder="Mon nom"/>
         </p>
-        <!--<p class="text-right">
-            <button class="btn-info btn" ng-click="logout()">Logout</button>
-        </p>-->
 
         <label for="room">Se rendre à la salle</label>
-        <input type="text" ng-model="room" name="room" id="room" class="form-control" placeholder="Nom de la salle"/>
+        <input type="text" ng-model="room" name="room" id="room" class="form-control" placeholder="Nom de la salle" required/>
         <button type="submit" class="btn btn-default" style="float: right;margin-top: 10px;">Go ></button>
-        <!--<button ng-click="logout()" type="submit" class="btn btn-default" style="float: right;margin-top: 10px;">Logout</button>-->
+        <!--<button ng-click="logout()" type="button" class="btn btn-default" style="float: right;margin-top: 10px;">Logout</button>-->
     </div>
 </form>
-
-<pre>{{name | json}}</pre>
-<pre>{{room | json}}</pre>
-<!--<pre>{{room | json}}</pre>-->
 
 <div class="footer text-right">
     <p>♥ from the SQLI team</p>

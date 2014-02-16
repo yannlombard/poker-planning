@@ -1,55 +1,45 @@
 'use strict';
 
-angular.module('pokerPlanningApp').controller('MainCtrl', function($scope, User, $location) {
+angular.module('pokerPlanningApp').controller('MainCtrl', function($scope, User, $location, $route) {
 
-    // get user infos
-    /*User.getName().then(function(user) {
-        $scope.userNameRef = user;
-        $scope.userNameRef.$bind($scope, "name");
+    /**
+     * set 3 way data binding when user logged in
+     */
+    var bindData = function() {
 
-    });*/
+        $scope.nameObj = User.getName();
+        $scope.nameObj.$bind($scope, 'name');
 
-    // store room id
-    /*User.getRoom().then(function(room) {
-        $scope.room = room;
-        $scope.room.$bind($scope, "roomId");
-    });*/
 
-    User.getUser().then(function() {
-        $scope.auth = true;
+        $scope.roomObj = User.getRoom();
+        $scope.roomObj.$bind($scope, 'room');
 
-        User.getName().then(function(name) {
+    };
 
-            $scope.remoteName = name;
-            $scope.remoteName.$bind($scope, "name");
+    /**
+     * auto login user
+     */
+    User.login().then(function(uid) {
+        console.log('logged in', uid);
+        $scope.uid = uid;
 
-        });
-
-        User.getRoom().then(function(room) {
-
-            $scope.remoteRoom = room;
-            $scope.remoteRoom.$bind($scope, "room");
-
-        });
+        bindData();
     });
 
-    $scope.click = function() {
-        User.login();
-    };
-
-
+    /**
+     * logout user
+     */
     $scope.logout = function() {
 
-        User.logout().then(function() {
-
-            console.log('logged out');
-
-        });
+        User.logout();
+        console.log('logged out');
+        $route.reload();
 
     };
 
-
-
+    /**
+     * enter in room
+     */
     // submit function
     $scope.submit = function() {
         $location.path('/' + $scope.room);

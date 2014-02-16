@@ -1,91 +1,105 @@
 'use strict';
 
-angular.module('pokerPlanningApp').factory('Room', function($q, $firebase) {
+angular.module('pokerPlanningApp').factory('Room', function($q, $firebase, User, config) {
     // Service logic
-    var deferred = $q.defer();
-
-    //var roomRef;
-
-    var id = '';
-
-    // finaly get infos
-    /*var getUsers = function() {
-
-        // get user data
-        roomRef = $firebase(new Firebase("https://poker-planning.firebaseio.com/rooms/" + id));
-
-        // resolve defered object
-        deferred.resolve(roomRef);
-
-    };*/
+    var roomID;
 
     /**
      * get room
      */
-    var getRoom = function() {
-        return $firebase(new Firebase("https://poker-planning.firebaseio.com/rooms/" + id));
+    var getRoom = function(id) {
+        var rid = id || roomID;
+        return $firebase(new Firebase(config.server + "/rooms/" + rid));
+    };
+
+    /**
+     * set user / add user
+     */
+    var setUser = function(uid) {
+        var room = getRoom();
+
+        var userID = uid || User.getUID();
+
+        room.$on('loaded', function() {
+            if(angular.isUndefined(room[userID])) {
+                room[userID] = {
+                    vote: -1
+                }
+
+                room.$save(userID);
+            }
+        });
+
+        return userID;
+    };
+
+    /**
+     * remove user
+     */
+    var removeUser = function(uid) {
+        var room = getRoom();
+
+        room.$remove(uid);
     };
 
     /**
      * vote for
      */
-    var voteFor = function(uid, vote) {
+    var voteFor = function(vote) {
         var room = getRoom();
 
-        console.log(room);
-        room[uid].vote = vote;
+        var userID = User.getUID();
 
-        room.$save(uid);
+        room[userID] = {
+            vote: vote
+        }
+
+        room.$save(userID);
+
+        return userID;
     };
 
     /**
-     * user join the room
+     * reset vote
      */
-    var join = function(id, user) {
-        var deferred = $q.defer();
-
+    var resetVote = function() {
         var room = getRoom();
 
-        room[id] = {
-            name: user.name,
-            vote: -1
-        }
+        room.$on('loaded', function() {
 
-        room.$save(id);
+            var keys = room.$getIndex();
+            keys.forEach(function(key, i) {
+                room[key].vote = -1;
+            });
 
-        //deferred.resolve(roomRef);
-        return deferred.promise;
+            room.$save();
+        });
     };
+
 
     // Public API here
     return {
-        setId: function(setId) {
-            id = setId;
-            //roomRef = null;
+
+        setID: function(id) {
+            roomID = id;
         },
-
-        join: function(id, user) {
-            return join(id, user);
+        getID: function() {
+            return roomID;
         },
-
-        voteFor: function(uid, vote) {
-            voteFor(uid, vote);
+        getRoom: function(id) {
+            return getRoom(id);
         },
-
-        get: function() {
-
-            return getRoom();
-
-            // get from cache
-            /*if(roomRef) {
-                deferred = $q.defer();
-                deferred.resolve(roomRef);
-            } else {
-                getUsers();
-            }*/
-
-            //return deferred.promise;
-
+        setUser: function(uid) {
+            return setUser(uid);
+        },
+        removeUser: function(uid) {
+            removeUser(uid);
+        },
+        voteFor: function(vote) {
+            voteFor(vote);
+        },
+        resetVote: function() {
+            resetVote();
         }
     };
 });

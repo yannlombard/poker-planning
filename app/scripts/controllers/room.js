@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User, Room, $routeParams, config, $location) {
+angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User, Room, $routeParams, config, $location, votesDoneFilter) {
+
+    $scope.votesDone = votesDoneFilter;
 
     // set roomID to scope
     $scope.roomID = $routeParams.roomID;
@@ -27,18 +29,15 @@ angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User,
         Room.setUser();
 
         // set user roomID
-        var userRoom = User.getRoom();
-        userRoom.$set($scope.roomID);
+        User.setRoom($scope.roomID);
 
         // if noname user, set user room, redirect to homepage
-        var userName = User.getName();
-        userName.$on('loaded', function() {
-
-            if(!userName.$value) {
+        User.hasName().then(function(hasName) {
+            if(!hasName) {
                 $location.path('/');
             }
-
         });
+
     });
 
     /**

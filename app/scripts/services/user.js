@@ -105,6 +105,29 @@ angular.module('pokerPlanningApp').factory('User', function($q, $firebase, $fire
     };
 
     /**
+     * set room
+     */
+    var setRoom = function(rid) {
+        getRoom().$set(rid);
+    };
+
+    /**
+     * has name ?
+     */
+    var hasName = function() {
+        var deferred = $q.defer();
+
+        var nameObj = getName();
+        nameObj.$on('loaded', function() {
+
+            deferred.resolve(!!nameObj.$value);
+
+        });
+
+        return deferred.promise;
+    };
+
+    /**
      * AUTO LOGIN
      */
     //login();
@@ -125,6 +148,12 @@ angular.module('pokerPlanningApp').factory('User', function($q, $firebase, $fire
         },
         getRoom: function(uid) {
             return getRoom(uid);
+        },
+        setRoom: function(rid) {
+            setRoom(rid);
+        },
+        hasName: function() {
+            return hasName();
         }
     };
 });

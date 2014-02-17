@@ -3,20 +3,15 @@
 
 <div class="jumbotron">
     <p ng-hide="roomObj">Chargement...</p>
-    <ul class="showValues values">
+    <ul class="values" ng-class="{showValues: votesDone(roomObj)}">
         <li ng-repeat="id in roomObj.$getIndex()" ng-class="{voted: roomObj[id].vote > -1}">
             <strong>{{votes[roomObj[id].vote]}}</strong> Mon nom<!--{{id}}-->
             <button ng-click="removeUser(id)" class="btn btn-danger"><i class="pull-right glyphicon glyphicon-remove"></i></button>
         </li>
-        <!--<li class="voted"><strong>3</strong> Julien</li>
-        <li><strong>5</strong> Sylvain</li>
-        <li><strong>3</strong> Maxime</li>
-        <li><strong>5</strong> Didier</li>
-        <li><strong>5</strong> Yann</li>-->
     </ul>
     <p class="text-right show average">
         <button ng-click="resetVote()" class="pull-left btn btn-danger">reset</button>
-        moyenne <strong>5</strong>
+        <span ng-show="roomObj | votesDone">Chiffre <strong>{{roomObj | average}}</strong></span>
     </p>
 
 </div>

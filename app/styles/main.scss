@@ -102,6 +102,8 @@ body {
   }
 
   strong {
+    display: inline-block;
+    min-width: 40px;
     @include opacity(0);
     @include transition(opacity 300ms);
   }

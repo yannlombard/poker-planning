@@ -12,10 +12,10 @@ angular.module('pokerPlanningApp').factory('User', function($q, $firebase, $fire
     /**
      * get user object
      */
-    /*var getUserObj = function(uid) {
+    var getUserObj = function(uid) {
         var userid = uid || loginObj.user.uid;
         return $firebase(new Firebase(config.server + "users/" + userid));
-    };*/
+    };
 
     /**
      * get user name object

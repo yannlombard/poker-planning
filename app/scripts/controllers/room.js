@@ -26,16 +26,18 @@ angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User,
         $scope.uid = uid;
 
         // set user data to room
-        Room.setUser();
+        Room.setUser().then(function() {
 
-        // set user roomID
-        User.setRoom($scope.roomID);
+            // set user roomID
+            User.setRoom($routeParams.roomID);
 
-        // if noname user, set user room, redirect to homepage
-        User.hasName().then(function(hasName) {
-            if(!hasName) {
-                $location.path('/');
-            }
+            // if noname user, set user room, redirect to homepage
+            User.hasName().then(function(hasName) {
+                if(!hasName) {
+                    $location.path('/');
+                }
+            });
+
         });
 
     });

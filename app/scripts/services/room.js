@@ -19,21 +19,25 @@ angular.module('pokerPlanningApp').factory('Room', function($q, $firebase, User,
     var updateNames = function() {
         var room = getRoom();
 
-        room.$off('child_added');
-        room.$off('child_removed');
+        /*room.$off('child_added');
+        room.$off('child_removed');*/
 
         room.$on('child_added', function(child) {
             var userName = User.getName(child.snapshot.name);
 
-            userName.$on('change', function() {
+            var updateName = function() {
                 names[child.snapshot.name] = userName.$value;
-            });
+            };
+
+            userName.$on('change', updateName);
+            userName.$on('loaded', updateName);
         });
 
         room.$on('child_removed', function(child) {
             var userName = User.getName(child.snapshot.name);
 
             userName.$off('change');
+            userName.$off('loaded');
         });
     };
 
@@ -41,6 +45,8 @@ angular.module('pokerPlanningApp').factory('Room', function($q, $firebase, User,
      * set user / add user
      */
     var setUser = function(uid) {
+        var deferred = $q.defer();
+
         var room = getRoom();
 
         var userID = uid || User.getUID();
@@ -52,10 +58,11 @@ angular.module('pokerPlanningApp').factory('Room', function($q, $firebase, User,
                 }
 
                 room.$save(userID);
+                deferred.resolve(userID);
             }
         });
 
-        return userID;
+        return deferred.promise;
     };
 
     /**

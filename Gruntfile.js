@@ -15,10 +15,22 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
+  // load addons
   grunt.loadNpmTasks('grunt-build-control');
+  grunt.loadNpmTasks('grunt-html2js');
 
   // Define the configuration for all the tasks
   grunt.initConfig({
+
+      html2js: {
+          options: {
+              // custom options, see below
+          },
+          main: {
+              src: ['views/**/*.html'],
+              dest: '<%= yeoman.dist %>/views/tmp/templates.js'
+          }
+      },
 
       buildcontrol: {
           options: {
@@ -412,6 +424,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'html2js',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',

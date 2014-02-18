@@ -28,7 +28,7 @@ module.exports = function (grunt) {
           },
           main: {
               src: ['views/**/*.html'],
-              dest: '<%= yeoman.dist %>/views/tmp/templates.js'
+              dest: '<%= yeoman.dist %>/scripts/templates.js'
           }
       },
 

@@ -1,6 +1,7 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
-@import 'sass-bootstrap/lib/bootstrap';
+//@import 'sass-bootstrap/lib/bootstrap';
+@import 'mixins';
 @import 'compass/css3';
 
 /**
@@ -118,7 +119,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
  * average
  */
 .average {
-  @extend .clearfix;
+  @include clearfix();
 
   margin: 0.5em 0 0;
   padding: 0.5em 0 0;

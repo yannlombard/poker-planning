@@ -1,17 +1,24 @@
-<h4 class="text-muted pull-right"><span style="font-weight: normal;">table</span> <strong>{{roomID}}</strong></h4>
-<h4 class="text-muted">poker planning</h4>
+<div class="clearfix header">
+    <h4 class="text-muted pull-left">
+        <i class="logo glyphicon glyphicon-time"></i>
+        poker planning
+    </h4>
+    <h4 class="text-muted pull-right"><span>{{roomID}}</span> <span style="font-weight: normal;"><i class="tableIcon glyphicon glyphicon-tag"></i></span></h4>
+</div>
 
 <div class="jumbotron">
     <p ng-hide="roomObj">Chargement...</p>
     <ul class="values" ng-class="{showValues: votesDone(roomObj)}">
         <li ng-repeat="id in roomObj.$getIndex()" ng-class="{voted: roomObj[id].vote > -1}">
-            <strong>{{votes[roomObj[id].vote]}}</strong> Mon nom<!--{{id}}-->
-            <button ng-click="removeUser(id)" class="btn btn-danger"><i class="pull-right glyphicon glyphicon-remove"></i></button>
+            <span class="checkMark" ng-class="{visible: !votesDone(roomObj) && roomObj[id].vote > -1}"><i class="glyphicon glyphicon-ok"></i></span>
+            <strong>{{votes[roomObj[id].vote]}}</strong> {{names[id] || 'Sans nom'}}
+            <button ng-click="removeUser(id)" class="btn btn-danger pull-right"><i class="glyphicon glyphicon-remove"></i></button>
         </li>
     </ul>
+
     <p class="text-right show average">
         <button ng-click="resetVote()" class="pull-left btn btn-danger">reset</button>
-        <span ng-show="roomObj | votesDone">Chiffre <strong>{{roomObj | average}}</strong></span>
+        <span class="pull-right" ng-class="{visible: votesDone(roomObj)}">Chiffre <strong>{{roomObj | average}}</strong></span>
     </p>
 
 </div>
@@ -22,5 +29,6 @@
 </ol>
 
 <div class="footer text-right">
-    <p>♥ from the SQLI team</p>
+    <a class="pull-left" href="/"><i class="glyphicon glyphicon-cog"></i></a>
+    <p>♥ from the SQLI Lyon team</p>
 </div>

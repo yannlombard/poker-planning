@@ -2,7 +2,8 @@
 
 angular.module('pokerPlanningApp').factory('Room', function($q, $firebase, User, config) {
     // Service logic
-    var roomID;
+    var roomID,
+        names = {};
 
     /**
      * get room
@@ -10,6 +11,30 @@ angular.module('pokerPlanningApp').factory('Room', function($q, $firebase, User,
     var getRoom = function(id) {
         var rid = id || roomID;
         return $firebase(new Firebase(config.server + "/rooms/" + rid));
+    };
+
+    /**
+     * update names
+     */
+    var updateNames = function() {
+        var room = getRoom();
+
+        room.$off('child_added');
+        room.$off('child_removed');
+
+        room.$on('child_added', function(child) {
+            var userName = User.getName(child.snapshot.name);
+
+            userName.$on('change', function() {
+                names[child.snapshot.name] = userName.$value;
+            });
+        });
+
+        room.$on('child_removed', function(child) {
+            var userName = User.getName(child.snapshot.name);
+
+            userName.$off('change');
+        });
     };
 
     /**
@@ -79,9 +104,11 @@ angular.module('pokerPlanningApp').factory('Room', function($q, $firebase, User,
 
     // Public API here
     return {
-
         setID: function(id) {
             roomID = id;
+
+            // update names
+            updateNames();
         },
         getID: function() {
             return roomID;
@@ -100,6 +127,9 @@ angular.module('pokerPlanningApp').factory('Room', function($q, $firebase, User,
         },
         resetVote: function() {
             resetVote();
+        },
+        getNames: function() {
+            return names;
         }
     };
 });

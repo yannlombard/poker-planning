@@ -1,6 +1,9 @@
 'use strict';
 
-angular.module('pokerPlanningApp').controller('MainCtrl', function($scope, User, $location, $route) {
+angular.module('pokerPlanningApp').controller('MainCtrl', function($scope, User, $location, $route, Page) {
+
+    // set page title
+    Page.setDefault();
 
     /**
      * set 3 way data binding when user logged in
@@ -20,7 +23,6 @@ angular.module('pokerPlanningApp').controller('MainCtrl', function($scope, User,
      * auto login user
      */
     User.login().then(function(uid) {
-        console.log('logged in', uid);
         $scope.uid = uid;
 
         bindData();
@@ -32,7 +34,6 @@ angular.module('pokerPlanningApp').controller('MainCtrl', function($scope, User,
     $scope.logout = function() {
 
         User.logout();
-        console.log('logged out');
         $route.reload();
 
     };

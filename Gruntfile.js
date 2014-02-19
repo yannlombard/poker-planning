@@ -15,20 +15,34 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
-  // load addons
-  grunt.loadNpmTasks('grunt-build-control');
-  grunt.loadNpmTasks('grunt-html2js');
-
   // Define the configuration for all the tasks
   grunt.initConfig({
 
-      html2js: {
-          options: {
-              // custom options, see below
+      replace: {
+          init: {
+              patterns: [
+                  {
+                      match: '<!--grunt-replace:tmp/template.js-->',
+                      replacement: '<script src="views/.tmp/templates.js"></script>',
+                      expression: false
+                  }
+              ]
           },
+          restore: {
+              patterns: [
+                  {
+                      match: '<script src="views/.tmp/templates.js"></script>',
+                      replacement: '<!--grunt-replace:tmp/template.js-->',
+                      expression: false
+                  }
+              ]
+          }
+      },
+
+      html2js: {
           main: {
-              src: ['views/**/*.html'],
-              dest: '<%= yeoman.dist %>/scripts/templates.js'
+              src: ['<%= yeoman.app %>/views/*.html', '<%= yeoman.app %>/views/**/*.html'],
+              dest: '<%= yeoman.app %>/views/.tmp/templates.js'
           }
       },
 
@@ -164,7 +178,8 @@ module.exports = function (grunt) {
           ]
         }]
       },
-      server: '.tmp'
+      server: '.tmp',
+      html2js: '<%= yeoman.app %>/views/.tmp'
     },
 
     // Add vendor prefixed styles
@@ -425,10 +440,13 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'html2js',
+    'replace:init',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
     'concat',
+    'clean:html2js',
+    'replace:restore',
     'ngmin',
     'copy:dist',
     'cdnify',

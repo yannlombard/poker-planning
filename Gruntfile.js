@@ -20,26 +20,81 @@ module.exports = function (grunt) {
 
       replace: {
           init: {
-              patterns: [
+              options: {
+                  patterns: [
+                      {
+                          match      : '<!--grunt-replace:tmp/template.js-->',
+                          replacement: '<script src="views/.tmp/templates.js"></script>',
+                          expression : false
+                      },
+                      {
+                          match      : "angular.module\\('pokerPlanningApp', \\[",
+                          replacement: "angular.module('pokerPlanningApp', ['templates-main',",
+                          expression : false
+                      }
+                  ],
+                  usePrefix: false
+              },
+              files  : [
                   {
-                      match: '<!--grunt-replace:tmp/template.js-->',
-                      replacement: '<script src="views/.tmp/templates.js"></script>',
-                      expression: false
+                      expand : true,
+                      flatten: true,
+                      src    : [
+                          '<%= yeoman.app %>/index.html',
+                      ],
+                      dest   : '<%= yeoman.app %>/'
+                  },
+                  {
+                      expand : true,
+                      flatten: true,
+                      src    : [
+                          '<%= yeoman.app %>/scripts/app.js'
+                      ],
+                      dest   : '<%= yeoman.app %>/scripts/'
                   }
               ]
           },
           restore: {
-              patterns: [
+              options: {
+                  patterns: [
+                      {
+                          match      : '<script src="views/.tmp/templates.js"></script>',
+                          replacement: '<!--grunt-replace:tmp/template.js-->',
+                          expression : false
+                      },
+                      {
+                          match      : "angular.module\\('pokerPlanningApp', \\['templates-main',",
+                          replacement: "angular.module('pokerPlanningApp', [",
+                          expression : false
+                      }
+                  ],
+                  usePrefix: false
+              },
+              files  : [
                   {
-                      match: '<script src="views/.tmp/templates.js"></script>',
-                      replacement: '<!--grunt-replace:tmp/template.js-->',
-                      expression: false
+                      expand : true,
+                      flatten: true,
+                      src    : [
+                          '<%= yeoman.app %>/index.html',
+                      ],
+                      dest   : '<%= yeoman.app %>/'
+                  },
+                  {
+                      expand : true,
+                      flatten: true,
+                      src    : [
+                          '<%= yeoman.app %>/scripts/app.js',
+                      ],
+                      dest   : '<%= yeoman.app %>/scripts/'
                   }
               ]
-          }
+          },
       },
 
       html2js: {
+          options: {
+              base: 'app'
+          },
           main: {
               src: ['<%= yeoman.app %>/views/*.html', '<%= yeoman.app %>/views/**/*.html'],
               dest: '<%= yeoman.app %>/views/.tmp/templates.js'
@@ -197,9 +252,9 @@ module.exports = function (grunt) {
       }
     },
 
-    
 
-    
+
+
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
       options: {
@@ -297,7 +352,8 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>',
-          src: ['*.html', 'views/*.html'],
+          //src: ['*.html', 'views/*.html'],
+          src: ['*.html'],
           dest: '<%= yeoman.dist %>'
         }]
       }

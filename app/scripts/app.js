@@ -7,7 +7,7 @@ angular.module('pokerPlanningApp', [
         'ngRoute',
         'firebase'
     ])
-    .config(function ($routeProvider) {
+    .config(function($routeProvider) {
 
         $routeProvider.when('/', {
 
@@ -16,15 +16,15 @@ angular.module('pokerPlanningApp', [
 
         }).when('/info', {
 
-            templateUrl: 'views/info.html',
-            controller : 'InfoCtrl'
+                templateUrl: 'views/info.html',
+                controller : 'InfoCtrl'
 
-        }).when('/:roomID', {
+            }).when('/:roomID', {
 
-            templateUrl: 'views/room.html',
-            controller : 'RoomCtrl'
+                templateUrl: 'views/room.html',
+                controller : 'RoomCtrl'
 
-        });
+            });
 
     }
 );

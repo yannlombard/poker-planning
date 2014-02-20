@@ -8,7 +8,14 @@
     text-align: center;
     line-height: 144px * 0.5;
     a {
-      color: #000;
+      color: #444;
+      text-decoration: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+      }
     }
   }
   .infoLogo {

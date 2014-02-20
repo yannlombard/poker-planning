@@ -77,7 +77,9 @@
 
     @media screen and (min-width: 768px) {
       float: left;
-      width: 50%;
+      margin-left: 5%;
+      margin-right: 5%;
+      width: 40%;
     }
 
     /*&.voted {
@@ -116,6 +118,7 @@
 .average {
   @include clearfix();
 
+  overflow: hidden;
   margin: 0.5em 0 0;
   padding: 0.5em 0 0;
   border-top:1px solid #fff;
@@ -134,25 +137,31 @@
   }
 
   span {
+    position: relative;
+    left:40px;
     display: block;
+
+    @include transition(left 100ms);
+    @extend %acc3d;
+
+    &.visible {
+      /*top:0px;
+      @include opacity(1);*/
+      left:0px;
+    }
   }
 
   strong {
     position: relative;
     //top:5px;
-    display: none;
-    //display: inline-block;
+    //display: none;
+    display: inline-block;
     vertical-align: baseline;
     min-width: 40px;
 
     /*@include opacity(0);
     @include transition(all 300ms);
     @extend %acc3d;*/
-  }
-  .visible strong {
-    /*top:0px;
-    @include opacity(1);*/
-    display: inline-block;
   }
 }
 

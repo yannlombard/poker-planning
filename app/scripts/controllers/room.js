@@ -2,21 +2,39 @@
 
 angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User, Room, $routeParams, config, $location, votesDoneFilter, Page) {
 
+    /**
+     * set page title
+     */
+    Page.setTitle($routeParams.roomID);
+
+    /**
+     * bind votesDone filter
+     */
     $scope.votesDone = votesDoneFilter;
 
-    // set roomID to scope
+    /**
+     * set roomID to scope
+     */
     $scope.roomID = $routeParams.roomID;
 
-    // set factory roomID
+    /**
+     * set factory roomID
+     */
     Room.setID($routeParams.roomID);
 
-    // get room data
+    /**
+     * get room data
+     */
     $scope.roomObj = Room.getRoom();
 
-    // get user names
+    /**
+     * get user names
+     */
     $scope.names = Room.getNames();
 
-    // bind votes list for ui
+    /**
+     * bind votes list for UI
+     */
     $scope.votes = config.votes;
 
     /**
@@ -25,19 +43,21 @@ angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User,
     User.login().then(function(uid) {
         $scope.uid = uid;
 
-        // set user data to room
-        Room.setUser().then(function() {
+        // set user roomID
+        User.setRoom($routeParams.roomID);
 
-            // set user roomID
-            User.setRoom($routeParams.roomID);
+        // if noname user, set user room, redirect to homepage
+        User.hasName().then(function(hasName) {
+            if(!hasName) {
 
-            // if noname user, set user room, redirect to homepage
-            User.hasName().then(function(hasName) {
-                if(!hasName) {
-                    $location.path('/');
-                }
-            });
+                $location.path('/');
 
+            } else {
+
+                // set user data to room
+                Room.setUser();
+
+            }
         });
 
     });
@@ -46,8 +66,7 @@ angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User,
      * vote for
      */
     $scope.voteFor = function(vote) {
-        var target = $scope.roomObj[User.getUID()].vote == vote ? -1 : vote;
-        Room.voteFor(target);
+        Room.voteFor(vote);
     };
 
     /**
@@ -63,7 +82,4 @@ angular.module('pokerPlanningApp').controller('RoomCtrl', function($scope, User,
     $scope.removeUser = function(uid) {
         Room.removeUser(uid);
     };
-
-    // set page title
-    Page.setTitle($routeParams.roomID);
 });

@@ -1,12 +1,12 @@
 <h4 class="text-muted"><i class="logo glyphicon glyphicon-time"></i> poker planning</h4>
 
-<form class="jumbotron form-group" style="overflow: hidden;" ng-submit="submit()">
+<div ng-hide="uid" class="loginProgress">
+    Identification en cours...
+</div>
 
-    <div ng-hide="uid">
-        <label for="name">Identification en cours...</label>
-    </div>
+<form class="jumbotron form-group" style="overflow: hidden;" ng-submit="submit()"  ng-show="uid">
 
-    <div ng-show="uid">
+    <div>
         <p>
             <label for="name">Mon nom</label>
             <input ng-model="name" class="form-control" type="text" name="name" id="name" placeholder="Mon nom"/>

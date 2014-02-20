@@ -127,11 +127,6 @@ angular.module('pokerPlanningApp').factory('User', function($q, $firebase, $fire
         return deferred.promise;
     };
 
-    /**
-     * AUTO LOGIN
-     */
-    //login();
-
     // Public API here
     return {
         login: function() {

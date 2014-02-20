@@ -22,11 +22,13 @@ angular.module('pokerPlanningApp').controller('MainCtrl', function($scope, User,
     /**
      * auto login user
      */
-    User.login().then(function(uid) {
-        $scope.uid = uid;
+    if(!$scope.uid) {
+        User.login().then(function(uid) {
+            $scope.uid = uid;
 
-        bindData();
-    });
+            bindData();
+        });
+    }
 
     /**
      * logout user

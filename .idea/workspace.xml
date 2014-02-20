@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78d5ab46-3a71-494b-a2eb-c582e9bf61b8" name="Default" comment="create room, add people to room&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/Default-568h@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/apple-touch-icon-114x114.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/apple-touch-icon-144x144.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/apple-touch-icon-57x57.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/apple-touch-icon-72x72.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/startup-640x920.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/startup.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/spec/controllers/Info.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/services/Page.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/spec/services/Page.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/info.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/controllers/info.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/controllers/page.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/spec/controllers/page.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/yeoman.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.html" afterPath="$PROJECT_DIR$/app/views/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.scss" afterPath="$PROJECT_DIR$/app/styles/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/room.html" afterPath="$PROJECT_DIR$/app/views/room.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/room.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/room.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/room.js" afterPath="$PROJECT_DIR$/app/scripts/services/room.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="78d5ab46-3a71-494b-a2eb-c582e9bf61b8" name="Default" comment="comment images rename grunt tasks used to avoid cache issues but generate 404 after build task&#10;">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/poker-planning.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
+    <list id="7c3fcdc2-bf7d-4fd8-b220-d59a1f35a540" name="ignore changelist" comment="" />
     <ignored path="poker-planning.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,59 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="61" selection-start="1002" selection-end="1002" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="1635">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="22" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="room.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/room.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="141" selection-start="156" selection-end="156" vertical-scroll-proportion="0.05172414" vertical-offset="0" max-vertical-offset="1095">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="12" selection-start="753" selection-end="880" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="450">
-              <folding>
-                <element signature="n#style#0;n#button#0;n#div#1;n#form#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="room.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/room.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="31" selection-start="1099" selection-end="1099" vertical-scroll-proportion="-10.666667" vertical-offset="44" max-vertical-offset="600">
-              <folding>
-                <element signature="n#style#0;n#span#1;n#h4#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="158" column="26" selection-start="2456" selection-end="2456" vertical-scroll-proportion="-19.333334" vertical-offset="1906" max-vertical-offset="3960">
+            <state line="29" column="23" selection-start="918" selection-end="918" vertical-scroll-proportion="0.81920904" vertical-offset="0" max-vertical-offset="7905">
               <folding />
             </state>
           </provider>
@@ -122,26 +57,32 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/bower.json" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/bower_components/firebase/.bower.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/scripts/services/config.js" />
-        <option value="$PROJECT_DIR$/app/scripts/services/user.js" />
         <option value="$PROJECT_DIR$/app/scripts/filters/average.js" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/app/scripts/filters/votesDone.js" />
-        <option value="$PROJECT_DIR$/app/scripts/services/room.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/page.js" />
         <option value="$PROJECT_DIR$/app/scripts/services/Page.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-        <option value="$PROJECT_DIR$/app/views/info.html" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/info.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/dist/index.html" />
+        <option value="$PROJECT_DIR$/app/styles/_mixins.scss" />
+        <option value="$PROJECT_DIR$/app/scripts/templates-TEMP-concat.js" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/views/room.html" />
-        <option value="$PROJECT_DIR$/app/styles/main.scss" />
-        <option value="$PROJECT_DIR$/app/views/main.html" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/room.js" />
+        <option value="$PROJECT_DIR$/app/scripts/services/user.js" />
+        <option value="$PROJECT_DIR$/app/scripts/services/room.js" />
+        <option value="$PROJECT_DIR$/app/styles/main.scss" />
+        <option value="$PROJECT_DIR$/app/images/clock.svg" />
+        <option value="$PROJECT_DIR$/app/views/main.html" />
+        <option value="$PROJECT_DIR$/app/views/room.html" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
+        <option value="$PROJECT_DIR$/app/styles/_info.scss" />
+        <option value="$PROJECT_DIR$/app/views/info.html" />
+        <option value="$PROJECT_DIR$/app/styles/_common.scss" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
       </list>
     </option>
   </component>
@@ -176,7 +117,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,22 +135,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="poker-planning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="poker-planning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -233,10 +160,11 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="906" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="options.lastSelected" value="preferences.sourceCode.JavaScript" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="SearchEverywhereHistory" value="setID" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -245,14 +173,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -263,15 +183,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -304,6 +232,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="78d5ab46-3a71-494b-a2eb-c582e9bf61b8" name="Default" comment="" />
+      <changelist id="7c3fcdc2-bf7d-4fd8-b220-d59a1f35a540" name="ignore changelist" comment="" />
       <created>1390912788064</created>
       <updated>1390912788064</updated>
     </task>
@@ -347,30 +276,90 @@
       <created>1392643622015</created>
       <updated>1392643622015</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="page title management&#10;grunt file port 9001&#10;webapp capable on iOS&#10;iOS icon &amp; startup screen">
+      <created>1392688460024</created>
+      <updated>1392688460024</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update app icon &amp; startup screen&#10;debug noname value">
+      <created>1392690670286</created>
+      <updated>1392690670286</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add grunt build control for CI">
+      <created>1392692216969</created>
+      <updated>1392692216969</updated>
+    </task>
+    <task id="LOCAL-00014" summary="hide logout button">
+      <created>1392692348898</created>
+      <updated>1392692348898</updated>
+    </task>
+    <task id="LOCAL-00015" summary="remove .idea from repo&#10;add picto to main view&#10;one build script to rules them all&#10;add buildcontrol to grunt build tasks&#10;">
+      <created>1392726025495</created>
+      <updated>1392726025495</updated>
+    </task>
+    <task id="LOCAL-00016" summary="try to use html2js for build only">
+      <created>1392727869444</created>
+      <updated>1392727869444</updated>
+    </task>
+    <task id="LOCAL-00017" summary="get bootstrap css from cdn to avoid font face mime bug on gh-pages&#10;html2js build template.js in dist/scripts/ folder">
+      <created>1392731274596</created>
+      <updated>1392731274596</updated>
+    </task>
+    <task id="LOCAL-00018" summary="debug go home link in room footer">
+      <created>1392731510474</created>
+      <updated>1392731510474</updated>
+    </task>
+    <task id="LOCAL-00019" summary="user grunt replace to perform html2js only on build task">
+      <created>1392819040766</created>
+      <updated>1392819040766</updated>
+    </task>
+    <task id="LOCAL-00020" summary="grunt html2js &amp; grunt replace works now">
+      <created>1392839973784</created>
+      <updated>1392839973784</updated>
+    </task>
+    <task id="LOCAL-00021" summary="debug new user enter by room page #1">
+      <created>1392857107585</created>
+      <updated>1392857107585</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fullfill info page #3">
+      <created>1392859541566</created>
+      <updated>1392859541566</updated>
+    </task>
+    <task id="LOCAL-00023" summary="create css3 animation to show vote value #4">
+      <created>1392860256036</created>
+      <updated>1392860256036</updated>
+    </task>
+    <task id="LOCAL-00024" summary="adjust design to desktop #2">
+      <created>1392860586104</created>
+      <updated>1392860586104</updated>
+    </task>
+    <task id="LOCAL-00025" summary="comment images rename grunt tasks used to avoid cache issues but generate 404 after build task">
+      <created>1392861115698</created>
+      <updated>1392861115698</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2015306" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20588236" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32736573" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20076726" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2869898" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2167382" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21099745" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23676682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20076726" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20971867" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32736573" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -393,9 +382,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2167382" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21099745" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -422,60 +411,32 @@
     <MESSAGE value="try to vote" />
     <MESSAGE value="rework User &amp; Room services&#10;open grunt server" />
     <MESSAGE value="average calcul filter&#10;all users has voted filter&#10;show / hide values only when all users has voted" />
-    <option name="LAST_COMMIT_MESSAGE" value="average calcul filter&#10;all users has voted filter&#10;show / hide values only when all users has voted" />
+    <MESSAGE value="page title management&#10;grunt file port 9001&#10;webapp capable on iOS&#10;iOS icon &amp; startup screen" />
+    <MESSAGE value="update app icon &amp; startup screen&#10;debug noname value" />
+    <MESSAGE value="add grunt build control for CI" />
+    <MESSAGE value="hide logout button" />
+    <MESSAGE value="remove .idea from repo&#10;add picto to main view&#10;one build script to rules them all&#10;add buildcontrol to grunt build tasks&#10;" />
+    <MESSAGE value="try to use html2js for build only" />
+    <MESSAGE value="get bootstrap css from cdn to avoid font face mime bug on gh-pages&#10;html2js build template.js in dist/scripts/ folder" />
+    <MESSAGE value="debug go home link in room footer" />
+    <MESSAGE value="user grunt replace to perform html2js only on build task" />
+    <MESSAGE value="grunt html2js &amp; grunt replace works now" />
+    <MESSAGE value="debug new user enter by room page #1" />
+    <MESSAGE value="fullfill info page #3" />
+    <MESSAGE value="create css3 animation to show vote value #4" />
+    <MESSAGE value="adjust design to desktop #2" />
+    <MESSAGE value="comment images rename grunt tasks used to avoid cache issues but generate 404 after build task" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment images rename grunt tasks used to avoid cache issues but generate 404 after build task" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="130" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="240" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="67" selection-start="2022" selection-end="2022" vertical-scroll-proportion="0.0" vertical-offset="470" max-vertical-offset="1275" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="21" selection-start="960" selection-end="964" vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="630" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="195" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="20" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="42" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="630" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="28" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.0" vertical-offset="1837" max-vertical-offset="2880" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="46" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="630" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="28" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.0" vertical-offset="1837" max-vertical-offset="2880" />
+        <state line="163" column="16" selection-start="5181" selection-end="5181" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7905">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main.html">
@@ -548,188 +509,199 @@
         <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="497" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="50" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.30973452" vertical-offset="275" max-vertical-offset="840">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/angularfire/angularfire.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="590" column="4" selection-start="20379" selection-end="20379" vertical-scroll-proportion="0.07925801" vertical-offset="8668" max-vertical-offset="13530">
-          <folding />
-        </state>
+        <state line="590" column="4" selection-start="20379" selection-end="20379" vertical-scroll-proportion="0.07925801" vertical-offset="8668" max-vertical-offset="13530" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/firebase/.bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="4" selection-start="442" selection-end="442" vertical-scroll-proportion="0.6063269" vertical-offset="0" max-vertical-offset="570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="62" selection-end="62" vertical-scroll-proportion="0.1193634" vertical-offset="0" max-vertical-offset="754">
-          <folding />
-        </state>
+        <state line="23" column="4" selection-start="442" selection-end="442" vertical-scroll-proportion="0.6063269" vertical-offset="0" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/sass-bootstrap/lib/_utilities.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="118" selection-end="129" vertical-scroll-proportion="0.26785713" vertical-offset="0" max-vertical-offset="930">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="118" selection-end="129" vertical-scroll-proportion="0.26785713" vertical-offset="0" max-vertical-offset="930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/sass-bootstrap/docs-assets/js/raw-files.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="440472" selection-end="440472" vertical-scroll-proportion="0.09297521" vertical-offset="0" max-vertical-offset="484">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="440472" selection-end="440472" vertical-scroll-proportion="0.09297521" vertical-offset="0" max-vertical-offset="484" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="53" selection-start="124" selection-end="124" vertical-scroll-proportion="0.07640068" vertical-offset="0" max-vertical-offset="589" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/filters/votesDone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0994695" vertical-offset="0" max-vertical-offset="754" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/filters/average.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="17" selection-start="658" selection-end="658" vertical-scroll-proportion="0.41777188" vertical-offset="0" max-vertical-offset="754" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/sass-bootstrap/lib/_buttons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="12" selection-start="1455" selection-end="1466" vertical-scroll-proportion="0.26164383" vertical-offset="724" max-vertical-offset="2460" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/sass-bootstrap/lib/_glyphicons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="218" column="14" selection-start="13616" selection-end="13616" vertical-scroll-proportion="4.020548" vertical-offset="335" max-vertical-offset="3645" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/Page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="10" selection-start="253" selection-end="253" vertical-scroll-proportion="0.2782462" vertical-offset="0" max-vertical-offset="593" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="4" selection-start="36" selection-end="36" vertical-scroll-proportion="0.07936508" vertical-offset="0" max-vertical-offset="756" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="0.17617449" vertical-offset="0" max-vertical-offset="596" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/sass-bootstrap/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="754" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/sass-bootstrap/lib/_button-groups.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="3" selection-start="368" selection-end="368" vertical-scroll-proportion="-0.36830357" vertical-offset="435" max-vertical-offset="3885">
+        <state line="70" column="15" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.36830357" vertical-offset="885" max-vertical-offset="3885" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="448" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/grunt-contrib-watch/tasks/watch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="347" selection-end="347" vertical-scroll-proportion="0.31746033" vertical-offset="0" max-vertical-offset="2685">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/grunt-html2js/tasks/html2js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="28" selection-start="807" selection-end="807" vertical-scroll-proportion="0.5047106" vertical-offset="0" max-vertical-offset="2505">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="41" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.26229507" vertical-offset="153" max-vertical-offset="885" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="36" selection-start="4672" selection-end="4672" vertical-scroll-proportion="0.5606695" vertical-offset="903" max-vertical-offset="1635" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="39" selection-start="434" selection-end="434" vertical-scroll-proportion="0.37798408" vertical-offset="0" max-vertical-offset="754" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="303" selection-end="303" vertical-scroll-proportion="0.2387268" vertical-offset="0" max-vertical-offset="2400" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="39" selection-start="2027" selection-end="2027" vertical-scroll-proportion="0.32360741" vertical-offset="1211" max-vertical-offset="2925" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/images/apple-touch-icon-57x57.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="3" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0795756" vertical-offset="0" max-vertical-offset="754" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="730">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/images/Default-568h@2x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="36" selection-start="1071" selection-end="1071" vertical-scroll-proportion="1.0526316" vertical-offset="0" max-vertical-offset="1365" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="11" selection-start="623" selection-end="623" vertical-scroll-proportion="0.56233424" vertical-offset="11" max-vertical-offset="855" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/images/clock.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="741" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="68" selection-start="23" selection-end="68" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="450" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/room.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="21" selection-start="334" selection-end="343" vertical-scroll-proportion="0.24390244" vertical-offset="0" max-vertical-offset="600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/_info.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="187" selection-end="187" vertical-scroll-proportion="0.375" vertical-offset="0" max-vertical-offset="510" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/_common.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="244" column="27" selection-start="3559" selection-end="3559" vertical-scroll-proportion="0.33541667" vertical-offset="3499" max-vertical-offset="4305" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="99" selection-start="554" selection-end="554" vertical-scroll-proportion="0.27439025" vertical-offset="0" max-vertical-offset="492">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="51" selection-start="1786" selection-end="1786" vertical-scroll-proportion="0.40319717" vertical-offset="733" max-vertical-offset="6135">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="53" selection-start="124" selection-end="124" vertical-scroll-proportion="0.07640068" vertical-offset="0" max-vertical-offset="589">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/filters/votesDone.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0994695" vertical-offset="0" max-vertical-offset="754">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="0" selection-start="2129" selection-end="2129" vertical-scroll-proportion="0.29575598" vertical-offset="1352" max-vertical-offset="2475">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/room.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="55" selection-start="316" selection-end="316" vertical-scroll-proportion="0.2387268" vertical-offset="0" max-vertical-offset="2115">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/filters/average.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="17" selection-start="658" selection-end="658" vertical-scroll-proportion="0.41777188" vertical-offset="0" max-vertical-offset="754">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/sass-bootstrap/lib/_buttons.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="12" selection-start="1455" selection-end="1466" vertical-scroll-proportion="0.26164383" vertical-offset="724" max-vertical-offset="2460">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/sass-bootstrap/lib/_glyphicons.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="14" selection-start="13616" selection-end="13616" vertical-scroll-proportion="4.020548" vertical-offset="335" max-vertical-offset="3645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.075885326" vertical-offset="0" max-vertical-offset="593">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/Page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="10" selection-start="253" selection-end="253" vertical-scroll-proportion="0.2782462" vertical-offset="0" max-vertical-offset="593">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="46" selection-start="50" selection-end="50" vertical-scroll-proportion="0.02636204" vertical-offset="0" max-vertical-offset="569">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="102" selection-end="102" vertical-scroll-proportion="0.12647554" vertical-offset="0" max-vertical-offset="593">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="318" selection-end="318" vertical-scroll-proportion="0.35413152" vertical-offset="0" max-vertical-offset="593">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="22" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="61" selection-start="1002" selection-end="1002" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="1635">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="26" selection-start="2456" selection-end="2456" vertical-scroll-proportion="-19.333334" vertical-offset="1906" max-vertical-offset="3960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/room.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="31" selection-start="1099" selection-end="1099" vertical-scroll-proportion="-10.666667" vertical-offset="44" max-vertical-offset="600">
-          <folding>
-            <element signature="n#style#0;n#span#1;n#h4#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="12" selection-start="753" selection-end="880" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="450">
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#1;n#form#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/room.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="141" selection-start="156" selection-end="156" vertical-scroll-proportion="0.05172414" vertical-offset="0" max-vertical-offset="1095">
+        <state line="29" column="23" selection-start="918" selection-end="918" vertical-scroll-proportion="0.81920904" vertical-offset="0" max-vertical-offset="7905">
           <folding />
         </state>
       </provider>

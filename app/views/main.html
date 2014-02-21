@@ -8,6 +8,9 @@
 
     <div>
         <p>
+            <input ng-model="spectate" type="checkbox" name="spectate" id="spectate"/> <label for="spectate">Spectateur</label>
+        </p>
+        <p ng-hide="spectate">
             <label for="name">Mon nom</label>
             <input ng-model="name" class="form-control" type="text" name="name" id="name" placeholder="Mon nom"/>
         </p>

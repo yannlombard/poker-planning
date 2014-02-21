@@ -11,7 +11,7 @@
     <ul class="values" ng-class="{showValues: votesDone(roomObj)}">
         <li ng-repeat="id in roomObj.$getIndex()" ng-class="{voted: roomObj[id].vote > -1}">
             <span class="checkMark" ng-class="{visible: !votesDone(roomObj) && roomObj[id].vote > -1}"><i class="glyphicon glyphicon-ok"></i></span>
-            <strong>{{votes[roomObj[id].vote]}}</strong> {{names[id] || '-'}}
+            <strong>{{votes[roomObj[id].vote]}}</strong> {{names[id] || 'Sans nom'}}
             <button ng-click="removeUser(id)" class="btn btn-danger pull-right"><i class="glyphicon glyphicon-remove"></i></button>
         </li>
     </ul>
@@ -24,7 +24,7 @@
 </div>
 
 <p ng-hide="uid" class="loginProgress">Identification...</p>
-<ol class="cards" ng-show="uid && roomObj">
+<ol class="cards" ng-show="uid && roomObj" ng-hide="spectate">
     <li ng-repeat="vote in votes"><a ng-class="{active: roomObj[uid].vote === $index}" href="" ng-click="voteFor($index)">{{vote}}</a></li>
 </ol>
 

@@ -32,6 +32,14 @@ angular.module('pokerPlanningApp').factory('User', function($q, $firebase, $fire
         var userid = uid || loginObj.user.uid;
         return $firebase(new Firebase(config.server + "users/" + userid + '/room'));
     };
+    /**
+     * get user spectate object
+     */
+    var getUserSpectateObj = function(uid) {
+        var userid = uid || loginObj.user.uid;
+        return $firebase(new Firebase(config.server + "users/" + userid + '/spectate'));
+    };
+
 
     /**
      * anonymous login
@@ -103,6 +111,13 @@ angular.module('pokerPlanningApp').factory('User', function($q, $firebase, $fire
     var getRoom = function(uid) {
         return getUserRoomObj(uid);
     };
+    /**
+     * get user spectate state
+     */
+    var getSpectate = function(uid) {
+        return getUserSpectateObj(uid);
+    };
+
 
     /**
      * set room
@@ -121,6 +136,22 @@ angular.module('pokerPlanningApp').factory('User', function($q, $firebase, $fire
         nameObj.$on('loaded', function() {
 
             deferred.resolve(!!nameObj.$value);
+
+        });
+
+        return deferred.promise;
+    };
+
+    /**
+     *  isSpectate
+     */
+    var isSpectate = function() {
+        var deferred = $q.defer();
+
+        var spectateObj = getSpectate();
+        spectateObj.$on('loaded', function() {
+
+            deferred.resolve(!!spectateObj.$value);
 
         });
 
@@ -149,6 +180,14 @@ angular.module('pokerPlanningApp').factory('User', function($q, $firebase, $fire
         },
         hasName: function() {
             return hasName();
+        },
+
+        isSpectate: function() {
+            return isSpectate();
+        },
+
+        getSpectate: function(uid) {
+            return getSpectate(uid);
         }
     };
 });

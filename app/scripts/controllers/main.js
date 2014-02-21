@@ -17,6 +17,9 @@ angular.module('pokerPlanningApp').controller('MainCtrl', function($scope, User,
         $scope.roomObj = User.getRoom();
         $scope.roomObj.$bind($scope, 'room');
 
+        $scope.spectateObj = User.getSpectate();
+        $scope.spectateObj.$bind($scope, 'spectate');
+
     };
 
     /**
